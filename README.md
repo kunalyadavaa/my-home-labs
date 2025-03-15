@@ -4,11 +4,14 @@
 
 **CLI**
 ``bash
-terraform init ```
+terraform init 
+```
 ```bash
-terraform plan ``` 
+terraform plan
+``` 
 ```bash
-terraform apply -auto-approve ```
+terraform apply -auto-approve
+```
 
 **Cloudinit - Image's** 
 https://alpinelinux.org/cloud/
