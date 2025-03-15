@@ -4,13 +4,20 @@
 
 **CLI**
 ``bash
+
 terraform init 
+
 ```
+
 ```bash
+
 terraform plan
+
 ``` 
 ```bash
+
 terraform apply -auto-approve
+
 ```
 
 **Cloudinit - Image's** 
