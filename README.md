@@ -3,10 +3,10 @@
 
 
 **CLI**
-<bash
+``bash
 terraform init
 terraform plan 
-terraform apply -auto-approve >
+terraform apply -auto-approve ``
 
 **Cloudinit - Image's** 
 https://alpinelinux.org/cloud/
