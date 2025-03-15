@@ -3,7 +3,7 @@
 
 
 **CLI**
-``bash
+```bash
 
 terraform init 
 terraform plan
