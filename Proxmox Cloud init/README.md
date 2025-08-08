@@ -63,3 +63,6 @@ Notes:
 Replace all <placeholders> with your values.
 For Windows VMs, use virtio-win drivers and skip Cloud-Init steps.
 The template will retain QEMU Guest Agent and serial settings. Cloned VMs will need fresh Cloud-Init data (username, password, SSH keys).
+
+# manuals Reff
+https://github.com/community-scripts/ProxmoxVE/discussions/272
