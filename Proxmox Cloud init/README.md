@@ -7,7 +7,7 @@ Build Ubuntu Cloud-init Template
    wget <https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img>
 
 ​ 2. Create VM and Configure
-Replace <VM-ID> with your VM ID (e.g., 100), <username>, <password>, and <path/to/public-key> with your values.
+Replace 101 with your VM ID (e.g., 100), <username>, <password>, and <path/to/public-key> with your values.
 "# Create VM
 qm create 101 --name ubuntu-cloud --cpu host --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
 
@@ -30,25 +30,25 @@ qm set 101 --ciuser <username> --cipassword "<password>" --sshkeys <path/to/publ
 
 # Enable QEMU Guest Agent and serial port
 
-qm set <VM-ID> --agent 1 --serial0 socket --vga serial0
+qm set 101 --agent 1 --serial0 socket --vga serial0
 
 # Resize disk (optional)
 
-qm resize <VM-ID> scsi0 20G
+qm resize 101 scsi0 20G
 
 # Start VM
 
-qm start <VM-ID>
+qm start 101
 
 ​ 4. Convert VM to Template
-qm template <VM-ID>
+qm template 101
 
 ​ 5. Clone Template to Create New VMs
 Replace <NEW-VM-ID> with a new ID (e.g., 101):
 
 # Clone the template
 
-qm clone <VM-ID> <NEW-VM-ID> --name ubuntu-clone --full
+qm clone 101 <NEW-VM-ID> --name ubuntu-clone --full
 
 # Configure Cloud-Init for the new VM
 
