@@ -8,7 +8,8 @@ Build Ubuntu Cloud-init Template
 
 ​ 2. Create VM and Configure
 Replace 101 with your VM ID (e.g., 100),root, 191191, and <path/to/public-key> with your values.
-"# Create VM
+# Create VM
+
 qm create 101 --name ubuntu-cloud --cpu host --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
 
 # Import and attach disk
