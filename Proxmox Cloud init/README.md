@@ -7,7 +7,7 @@ Build Ubuntu Cloud-init Template
    wget <https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img>
 
 ​ 2. Create VM and Configure
-Replace 101 with your VM ID (e.g., 100), <username>, <password>, and <path/to/public-key> with your values.
+Replace 101 with your VM ID (e.g., 100),root, 191191, and <path/to/public-key> with your values.
 "# Create VM
 qm create 101 --name ubuntu-cloud --cpu host --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
 
@@ -26,7 +26,7 @@ qm set 101 --ide2 local-lvm:cloudinit
 
 # Set Cloud-Init settings
 
-qm set 101 --ciuser <username> --cipassword "<password>" --sshkeys <path/to/public-key> --ipconfig0 ip=dhcp
+qm set 101 --ciuserroot --cipassword "191191" --sshkeys <path/to/public-key> --ipconfig0 ip=dhcp
 
 # Enable QEMU Guest Agent and serial port
 
@@ -52,7 +52,7 @@ qm clone 101 <NEW-VM-ID> --name ubuntu-clone --full
 
 # Configure Cloud-Init for the new VM
 
-qm set <NEW-VM-ID> --ciuser <username> --cipassword "<password>" --sshkeys <path/to/public-key> --ipconfig0 ip=dhcp
+qm set <NEW-VM-ID> --ciuserroot --cipassword "191191" --sshkeys <path/to/public-key> --ipconfig0 ip=dhcp
 
 # Start the new VM
 
